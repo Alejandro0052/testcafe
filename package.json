@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:e2e": "testcafe chrome e2e-tests/*.test.js"
+    "test:e2e": "testcafe chrome e2e-test/**/*.test.js"
   },
   "keywords": [],
   "author": "",
