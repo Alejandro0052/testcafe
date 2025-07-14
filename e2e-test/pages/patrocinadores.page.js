@@ -1,9 +1,9 @@
 import { Selector } from 'testcafe';
 
-class DeportistasPage {
+class PatrocinadoresPage {
   constructor() {
-    this.card = Selector('#carddeportistas');
-    this.backButton = Selector('#backdeportistas');
+    this.card = Selector('#cardpatrocinadores');
+    this.backButton = Selector('#backpatrocinadores');
   }
 
   async validatePage(t) {
@@ -15,4 +15,4 @@ class DeportistasPage {
   }
 }
 
-export default new DeportistasPage();
+export default new PatrocinadoresPage();

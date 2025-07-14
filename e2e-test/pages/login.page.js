@@ -1,19 +1,18 @@
 import { Selector } from 'testcafe';
 
-export class LoginPage {
-    constructor() {
-        this.usernameInput = Selector('#username');
-        this.passwordInput = Selector('#password');
-        this.loginButton   = Selector('#login-button');
-    }
+class LoginPage {
+  constructor() {
+    this.usernameInput = Selector('#username');
+    this.passwordInput = Selector('#password');
+     this.submitButton = Selector('#login-button');
+  }
 
-    async login(t, username, password) {
-        await t
-            .typeText(this.usernameInput, username)
-            .wait(1000)
-            .typeText(this.passwordInput, password)
-            .wait(1000)
-            .click(this.loginButton)
-            .wait(1500);
-    }
+  async login(t, username, password) {
+    await t
+      .typeText(this.usernameInput, username)
+      .typeText(this.passwordInput, password)
+      .click(this.submitButton);
+  }
 }
+
+export default new LoginPage();
