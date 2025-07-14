@@ -5,6 +5,7 @@ import patrocinadoresPage from '../pages/patrocinadores.page';
 import marcasPage from '../pages/marcas.page';
 import { validUser } from '../data/credentials';
 import nutricionistasPage from '../pages/nutricionistas.page';
+import eventosPage from '../pages/eventos.page';
 
 fixture`Flujo completo en Elite Hub`
   .page`http://localhost:4200/login`; 
@@ -29,7 +30,11 @@ test('Login y navegación entre vistas', async t => {
 
   await homePage.goToNutricionistas(t);
   await nutricionistasPage.validatePage(t);
-  await nutricionistasPage.goBack;
+  await nutricionistasPage.goBack(t);
+
+  await homePage.goToEventos(t);
+  await eventosPage.validatePage(t);
+  //await eventosPage.goBack(t);
 
 });
 
